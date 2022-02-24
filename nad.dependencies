@@ -1,0 +1,20 @@
+[
+  {
+    "remote": "github",
+    "repository": "ariffjenong/android_kernel_sony_msm8998",
+    "target_path": "kernel/sony/msm8998",
+    "branch": "nad12.1"
+  },
+  {
+    "remote": "github",
+    "repository": "ariffjenong/android_device_sony_yoshino-common",
+    "target_path": "device/sony/yoshino-common",
+    "branch": "nad12.1"
+  },
+  {
+    "remote": "github",
+    "repository": "ariffjenong/android_vendor_sony_maple_dsds",
+    "target_path": "vendor/sony/maple_dsds",
+    "branch": "nad12.1"
+  }
+]

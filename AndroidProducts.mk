@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_maple_dsds.mk
+    $(LOCAL_DIR)/nad_maple_dsds.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_maple_dsds-user \
-    lineage_maple_dsds-userdebug \
-    lineage_maple_dsds-eng
+    nad_maple_dsds-user \
+    nad_maple_dsds-userdebug \
+    nad_maple_dsds-eng
