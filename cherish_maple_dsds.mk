@@ -27,7 +27,7 @@ PRODUCT_MANUFACTURER := Sony
 
 # Cherish OS Stuffs
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.cherish.maintainer=Arif JeNong
+    ro.cherish.maintainer=ArifJeNong
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=maple_dsds \
