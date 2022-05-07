@@ -32,6 +32,6 @@ PRODUCT_GMS_CLIENTID_BASE := android-sony
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=maple_dsds \
-    PRIVATE_BUILD_DESC="G8142-user 9 47.2.A.10.107 172320177 release-keys"
+    PRIVATE_BUILD_DESC="raven-user 13 TP1A.220905.004 8927612 release-keys"
 
-BUILD_FINGERPRINT := Sony/G8142/G8142:9/47.2.A.10.107/172320177:user/release-keys
+BUILD_FINGERPRINT := google/raven/raven:13/TP1A.220905.004/8927612:user/release-keys
