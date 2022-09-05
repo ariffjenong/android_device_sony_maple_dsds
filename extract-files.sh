@@ -53,6 +53,58 @@ if [ -z "${SRC}" ]; then
     SRC="adb"
 fi
 
+function blob_fixup() {
+    case "${1}" in
+        vendor/lib/vendor.somc.hardware.camera.provider@1.0.so)
+            "${PATCHELF_0_8}" --remove-needed "libhidlbase.so" "${2}"
+            sed -i "s/libhidltransport.so/libhidlbase-v32.so\x00/" "${2}"
+            ;;
+        vendor/lib64/com.fingerprints.extension@1.0.so)
+            "${PATCHELF_0_8}" --remove-needed "libhidlbase.so" "${2}"
+            sed -i "s/libhidltransport.so/libhidlbase-v32.so\x00/" "${2}"
+            ;;
+        vendor/lib64/com.qualcomm.qti.ant@1.0.so)
+            "${PATCHELF_0_8}" --remove-needed "libhidlbase.so" "${2}"
+            sed -i "s/libhidltransport.so/libhidlbase-v32.so\x00/" "${2}"
+            ;;
+        vendor/lib64/vendor.display.color@1.0.so)
+            "${PATCHELF_0_8}" --remove-needed "libhidlbase.so" "${2}"
+            sed -i "s/libhidltransport.so/libhidlbase-v32.so\x00/" "${2}"
+            ;;
+        vendor/lib64/vendor.qti.esepowermanager@1.0.so)
+            "${PATCHELF_0_8}" --remove-needed "libhidlbase.so" "${2}"
+            sed -i "s/libhidltransport.so/libhidlbase-v32.so\x00/" "${2}"
+            ;;
+        vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so)
+            "${PATCHELF_0_8}" --remove-needed "libhidlbase.so" "${2}"
+            sed -i "s/libhidltransport.so/libhidlbase-v32.so\x00/" "${2}"
+            ;;
+        vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so)
+            "${PATCHELF_0_8}" --remove-needed "libhidlbase.so" "${2}"
+            sed -i "s/libhidltransport.so/libhidlbase-v32.so\x00/" "${2}"
+            ;;
+        vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so)
+            "${PATCHELF_0_8}" --remove-needed "libhidlbase.so" "${2}"
+            sed -i "s/libhidltransport.so/libhidlbase-v32.so\x00/" "${2}"
+            ;;
+        vendor/lib64/vendor.semc.hardware.light@1.0.so)
+            "${PATCHELF_0_8}" --remove-needed "libhidlbase.so" "${2}"
+            sed -i "s/libhidltransport.so/libhidlbase-v32.so\x00/" "${2}"
+            ;;
+        vendor/lib64/vendor.semc.hardware.thermal@1.0.so)
+            "${PATCHELF_0_8}" --remove-needed "libhidlbase.so" "${2}"
+            sed -i "s/libhidltransport.so/libhidlbase-v32.so\x00/" "${2}"
+            ;;
+        vendor/lib64/vendor.semc.system.idd@1.0.so)
+            "${PATCHELF_0_8}" --remove-needed "libhidlbase.so" "${2}"
+            sed -i "s/libhidltransport.so/libhidlbase-v32.so\x00/" "${2}"
+            ;;
+        vendor/lib64/vendor.somc.hardware.security.secd@1.0.so)
+            "${PATCHELF_0_8}" --remove-needed "libhidlbase.so" "${2}"
+            sed -i "s/libhidltransport.so/libhidlbase-v32.so\x00/" "${2}"
+            ;;
+    esac
+}
 
 # Initialize the helper
 setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" true "${CLEAN_VENDOR}"
