@@ -3,18 +3,24 @@
     "remote": "device",
     "repository": "android_kernel_sony_msm8998",
     "target_path": "kernel/sony/msm8998",
-    "branch": "12.1-fbe"
+    "branch": "13"
   },
   {
     "remote": "device",
     "repository": "android_device_sony_yoshino-common",
     "target_path": "device/sony/yoshino-common",
-    "branch": "12.1-fbe"
+    "branch": "13"
+  },
+  {
+    "remote": "device",
+    "repository": "android_vendor_sony_yoshino-common",
+    "target_path": "vendor/sony/yoshino-common",
+    "branch": "13"
   },
   {
     "remote": "device",
     "repository": "android_vendor_sony_maple_dsds",
     "target_path": "vendor/sony/maple_dsds",
-    "branch": "12.1-fbe"
+    "branch": "13"
   }
 ]
